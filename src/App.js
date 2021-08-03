@@ -3,18 +3,26 @@ import './App.css';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
-
+import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 function App() {
   return (
     <div>
-      <HeaderComponent />
+        
 
+        <Router>
+        <HeaderComponent />
+              
+            <div className="container">
+              <Switch> http://localhost:3000/employees
+                <Route path ="/" component = {ListEmployeeComponent}></Route>
+                  <Route path="/employees" component={ListEmployeeComponent}></Route>                 
+                 
+              </Switch>
+            </div>
+     
 
-    <div className="container">
-      <ListEmployeeComponent />
-    </div>
-    <FooterComponent />
-
+<FooterComponent />
+</Router>
     </div>
 
   );
