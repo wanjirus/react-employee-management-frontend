@@ -4,19 +4,18 @@ import ListEmployeeComponent from './components/ListEmployeeComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 function App() {
   return (
-    <div>
-        
-
+    <div>  
         <Router>
-        <HeaderComponent />
-              
+          <HeaderComponent />  
             <div className="container">
-              <Switch> http://localhost:3000/employees
-                <Route path ="/" component = {ListEmployeeComponent}></Route>
+              <Switch>
+                <Route path ="/" exact component = {ListEmployeeComponent}></Route>
                   <Route path="/employees" component={ListEmployeeComponent}></Route>                 
-                 
+                  <Route path="/add-employee" component={CreateEmployeeComponent}></Route>                 
+                    <ListEmployeeComponent />
               </Switch>
             </div>
      
