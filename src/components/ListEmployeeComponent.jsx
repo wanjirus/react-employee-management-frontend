@@ -20,11 +20,11 @@ class ListEmployeeComponent extends Component {
         });
     }
      addEmployee(){
-        this.props.history.push('/add-employee');
+        this.props.history.push('/add-employee/_add');
  
      }
      editEmployee(id){
-         this.props.history.push(`/update-employee/${id}`);
+         this.props.history.push(`/add-employee/${id}`);
 
 
 
@@ -62,7 +62,8 @@ class ListEmployeeComponent extends Component {
                                      <td>{employee.emailId}</td>
                                      <td> 
                                          <button onClick={()=>this.editEmployee(employee.id)} className='btn btn-info' >update</button>
-
+                                         <button style={{marginLeft:'10%'}} className='btn btn-danger'>Delete</button> 
+                                         
                                      </td>
 
                                  </tr>
