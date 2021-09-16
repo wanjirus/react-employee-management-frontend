@@ -17,6 +17,7 @@ class ViewEmployeeComponent extends Component {
 
         });
     }
+    
     render() {
         return (
             <div>

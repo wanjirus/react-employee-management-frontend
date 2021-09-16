@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
 import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
-import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
+import ChatPage from './components/chat/ChatPage'
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
+import UploadFiles from './components/upload-files.component';
 function App() {
   return (
     <div>  
@@ -18,14 +17,16 @@ function App() {
                   <Route path="/employees" component={ListEmployeeComponent}></Route>                 
                   <Route path="/add-employee/:id" component={CreateEmployeeComponent}></Route>
                   <Route path="/view-employee/:id" component={ViewEmployeeComponent}></Route>               
-                  {/*<Route path="/update-employee/:id" component={UpdateEmployeeComponent}></Route>*/}                 
+                  <Route path="/chat/:id" component={ChatPage}></Route>  
+                  <Route paath="/message/"component={UploadFiles}></Route>             
                     <ListEmployeeComponent />
               </Switch>
             </div>
      
 
-<FooterComponent />
+
 </Router>
+
     </div>
 
   );
